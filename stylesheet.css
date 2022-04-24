@@ -1,0 +1,338 @@
+
+  html {
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+  
+  body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Spectral', serif;
+    color: #6a6b5d;
+  }
+  
+  .hero-img{
+    min-height: 80vh;
+    border-bottom: 5px solid #765560;
+    background-image: url("image-of-several-flasks-with-multi-color-liquids-SBI-300727651.jpg");
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  #site-title{
+    display: flex;
+    align-items: center;
+    background: white;
+    width: fit-content;
+    height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: relative;
+    border: 8px solid #765560;
+    margin-bottom: 100px;
+  }
+  
+  #site-title h1{
+    font-size: 5em;
+    color: #765560;
+    padding: 0px 30px 0px 30px;
+    white-space: nowrap;
+  }
+  
+  .body-section{
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    width:85%;
+    max-width: 1300px;
+    padding-bottom: 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .body-section-content{
+    display:flex;
+    flex-direction: row;
+  }
+  
+  .body-section-content p{
+    width: 40%;
+  }
+  
+  .body-section-content-graphic {
+      display: flex;
+      align-items: center;
+  }
+  
+  .graphic-image{
+    position:absolute;
+    width: 50vw;
+    height: 50vw;
+    max-width: 700px;
+    max-height: 700px;
+    background-size: 100% 100%;
+    content: "";
+  }
+  
+  .graphic-image-3{
+    background-image: url("science-concept-SBI-300613472.jpg");
+  }
+
+/*   .graphic-image-1{
+    background-image: url("https://senseslab.com/build/media/illustrations/service-design/layers/service-design-layer1@1x.jpg");
+  } */
+ /*  
+  .graphic-image-2{
+    background-image: url("https://senseslab.com/build/media/illustrations/service-design/layers/service-design-layer2@1x.png");
+  }
+  
+  .graphic-image-3{
+    background-image: url("https://senseslab.com/build/media/illustrations/collaborative-design/layers/collaborative-design-layer1@1x.jpg");
+  }
+  
+  .graphic-image-4{
+    background-image: url("https://senseslab.com/build/media/illustrations/collaborative-design/layers/collaborative-design-layer2@1x.png");
+  } */
+  
+  .team-members{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .team-members div{
+    padding: 20px;
+    width: 33%;
+  }
+  
+  .team-members img{
+    width: 50%;
+    height: auto;
+  }
+  
+  .team-members p{
+  /*   display:none; */
+  }
+  
+  
+  /* Navigation */
+  
+  #cd-vertical-nav {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    bottom: auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  #cd-vertical-nav li {
+    text-align: right;
+    list-style-type: none;
+  }
+  #cd-vertical-nav a {
+    display: inline-block;
+    /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  #cd-vertical-nav a:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #cd-vertical-nav a span {
+    float: right;
+    display: inline-block;
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -ms-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
+  }
+  #cd-vertical-nav a:hover span {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  #cd-vertical-nav a:hover .cd-label {
+    opacity: 1;
+  }
+  #cd-vertical-nav a:hover .cd-dot {
+    background-color: #765560;
+  }
+  
+  #cd-vertical-nav a .active-section{
+    background: #765560;
+    transform: scale(1);
+  }
+  
+  #cd-vertical-nav .cd-dot {
+    position: relative;
+    /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+    top: 8px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: 2px solid #765560;
+    -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+    -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+    transition: transform 0.2s, background-color 0.5s;
+    -webkit-transform-origin: 100%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 100%;
+  }
+  #cd-vertical-nav .cd-label {
+    position: relative;
+    margin-right: 10px;
+    padding: .4em .5em;
+    color: #765560;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bolder;
+    background: white;
+    border-radius: 10%;
+    border: 1px solid;
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0;
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+  }
+  
+  
+  /* Google Fonts */
+  /* cyrillic */
+  @font-face {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Spectral Regular'), local('Spectral-Regular'), url(https://fonts.gstatic.com/s/spectral/v6/rnCr-xNNww_2s0amA9M9knj-SA.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  }
+  /* vietnamese */
+  @font-face {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Spectral Regular'), local('Spectral-Regular'), url(https://fonts.gstatic.com/s/spectral/v6/rnCr-xNNww_2s0amA9M2knj-SA.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Spectral Regular'), local('Spectral-Regular'), url(https://fonts.gstatic.com/s/spectral/v6/rnCr-xNNww_2s0amA9M3knj-SA.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Spectral';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Spectral Regular'), local('Spectral-Regular'), url(https://fonts.gstatic.com/s/spectral/v6/rnCr-xNNww_2s0amA9M5kng.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+/*   body {
+       margin: 0;
+       padding: 20px;
+  } */
+   .quiz {
+       padding: 0 30px 20px 30px;
+       max-width: 960px;
+       margin: 0 auto;
+  }
+   .quiz ul {
+       list-style: none;
+       padding: 0;
+       margin: 0;
+  }
+   .quiz-question {
+       font-weight: bold;
+       display: block;
+       padding: 30px 0 10px 0;
+       margin: 0;
+  }
+   .quiz-answer {
+       margin: 0;
+       padding: 10px;
+       background: #f7f7f7;
+       margin-bottom: 5px;
+       cursor: pointer;
+  }
+   .quiz-answer:hover {
+       background: #eee;
+  }
+   .quiz-answer:before {
+       content: "";
+       display: inline-block;
+       width: 15px;
+       height: 15px;
+       border: 1px solid #ccc;
+       background: #fff;
+       vertical-align: middle;
+       margin-right: 10px;
+  }
+   .quiz-answer.active:before {
+       background-color: #333;
+       border-color: #333;
+  }
+   .quiz-answer.correct:before {
+       background-color: green;
+       border-color: green;
+  }
+   .quiz-answer.incorrect:before {
+       background-color: red;
+       border-color: red;
+  }
+   .quiz-answer.active.correct:before {
+       outline: 2px solid green;
+       outline-offset: 2px;
+  }
+   .quiz-result {
+       max-width: 960px;
+       margin: 0 auto;
+       font-weight: bold;
+       text-align: center;
+       color: #fff;
+       padding: 20px;
+  }
+   .quiz-result.good {
+       background: green;
+  }
+   .quiz-result.mid {
+       background: orange;
+  }
+   .quiz-result.bad {
+       background: red;
+  }
+   
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+  }
