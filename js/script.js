@@ -31,7 +31,7 @@ var Quiz = function () {
     { question: 9, answer: "a" },
     { question: 10, answer: "c" },
     { question: 11, answer: "c" },
-    { question: 12, answer: "d" },
+    { question: 12, answer: "b" },
   ];
 
   this._pickAnswer = function ($answer, $answers) {
